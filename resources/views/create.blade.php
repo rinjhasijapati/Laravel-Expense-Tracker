@@ -11,17 +11,16 @@
 <body>
     <main class="container-md">
         <header>
-            <h1>Create New Expenses!</h1>
+            <h1>Create new Expenses!</h1>
         </header>
         <section>
             <div class="card">
                 <div class="card-body">
-                    <form method="post" action="{{route('expense.store')}}">
-                        @csfr()
+                    <form method="post" action="/submit-form">
+                        @csrf()
                         <div class="mb-3">
                             <label class="form-label">Expenses title</label>
                             <input type="text" class="form-control" name="title">
-
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Amount</label>
@@ -36,10 +35,8 @@
                     </form>
                 </div>
             </div>
-
         </section>
     </main>
-
 </body>
 
 </html>
